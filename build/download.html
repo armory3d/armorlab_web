@@ -1,0 +1,92 @@
+
+  <div class="uk-section uk-section-secondary">
+  <div class="uk-text-center">
+  <br><br>In construction. 🔨
+  </div>
+  </div>
+
+  <!-- <div class="uk-section uk-section-secondary">
+    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+        <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+        <div class="gumroad-product-embed" data-gumroad-product-id="armorlab" style="text-align: center;">
+          <a href="https://gumroad.com/l/armorlab">Loading...</a>
+        </div>
+      </div>
+      <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
+        <div class="uk-margin-left uk-margin-top text-container">
+          <h2 class="uk-heading-divider ro-text-header">ArmorLab Preview</h2>
+          Before proceeding, please <a href="https://armorlab.org/manual">read the manual</a> first to know what parts need more work. The preview version has many rough edges and the experience may be frustrating.<br><br>
+          All updates are included for free. Source code is available on <a href="https://github.com/armory3d/armorlab">GitHub</a>. Thank you for enabling further ArmorLab development!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="uk-section uk-section-secondary">
+    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div style="padding: 0">
+        <div class="uk-margin-left uk-margin-top text-container">
+          <h2 class="uk-heading-divider ro-text-header">Release</h2>
+          <ul>
+            <li>Version: <span id="spanversion">...</span></li>
+            <li>Updated: <span id="spanupdated">...</span></li>
+            <li><a href="notes.html">What's new</a></li>
+          </ul>
+          <p>🖌🎨</p>
+        </div>
+      </div>
+      <div style="padding: 0">
+        <img src="img/plugin.jpg">
+      </div>
+    </div>
+  </div>
+
+  <div class="uk-section uk-section-secondary">
+    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+        <img src="img/plugin.jpg">
+      </div>
+      <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
+        <div class="uk-margin-left uk-margin-top text-container">
+          <h2 class="uk-heading-divider ro-text-header">Development</h2>
+          <ul>
+          <li><b><span id="spanstatus">...</span></b> people already supported the project ❤️</li>
+          <li>Follow development on <a href="https://github.com/armory3d/armorlab">GitHub</a></li>
+          <li>ArmorLab is also available on <a href="https://armory.itch.io/armorlab">itch.io</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="uk-section uk-section-secondary">
+    <br><br><br><br>
+    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-flex-first uk-flex-last@l" style="padding: 0" align="center">
+        <img src="img/ava.png">
+      </div>
+    </div>
+    <br><br><br><br>
+  </div>
+
+
+  <script type="text/javascript">
+    $.get("https://luboslenco.gitlab.io/fund_import/index.html", function(data) {
+      data = JSON.parse(data);
+      $("#spanstatus").html("" + data.lab + "");
+    });
+  </script>
+
+  <script type="text/javascript">
+    $.get("https://luboslenco.gitlab.io/armorpaint/index_lab.html", function(data) {
+      data = JSON.parse(data);
+      var s = data.version + '';
+      var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      var year = s[0] + s[1];
+      var month = s[2] + s[3];
+      var day = s[4] === '0' ? s[5] : s[4] + s[5];
+      $("#spanversion").html("" + data.name + "");
+      $("#spanupdated").html("" + months[parseInt(month) - 1] + ' ' + day + ', 20' + year + "");
+    });
+  </script>

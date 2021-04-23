@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ArmorLab | AI-Powered Texture Authoring</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="ArmorLab | AI-Powered Texture Authoring">
+  <meta name="description" content="ArmorLab is a software designed for authoring PBR textures with AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://armorlab.org/">
+  <meta property="og:title" content="ArmorLab | AI-Powered Texture Authoring">
+  <meta property="og:description" content="ArmorLab is a software designed for authoring PBR textures with AI.">
+  <meta property="og:image" content="https://armorlab.org/img/x.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://armorlab.org/">
+  <meta property="twitter:title" content="ArmorLab | AI-Powered Texture Authoring">
+  <meta property="twitter:description" content="ArmorLab is a software designed for authoring PBR textures with AI.">
+  <meta property="twitter:image" content="https://armorlab.org/img/x.jpg">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
+  <!-- Font Loading -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="ro-text-content">
+
+  <!-- large screen nav -->
+  <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <div class="uk-background-secondary uk-light">
+      <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+
+        <div class="uk-navbar-left uk-margin-left">
+          <a href="index.html"><img src="img\Logo.png" style="max-height: 50px" ></a>
+          <button class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORLAB</button>
+          <div uk-dropdown="mode: click">
+              <ul class="uk-nav uk-dropdown-nav">
+                  <li><a href="https://armorpaint.org/">ARMORPAINT</a></li>
+              </ul>
+          </div>
+        </div>
+
+        <div class="uk-navbar-right uk-margin-right">
+          <ul class="uk-navbar-nav uk-text-capitalize">
+            <li><a href="index.html">home</a></li>
+            <li><a href="news.html">news</a></li>
+            <li><a href="manual.html">manual</a></li>
+            <li><a href="howto.html">how to</a></li>
+            <li><a href="community.html">community</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+          </ul>
+          <a class="uk-button uk-button-default" href="download.html">download</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- mobile nav-->
+  <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border:0;" uk-sticky-fixed>
+    <button class="uk-button uk-button-default uk-width-1-1" style="border:0;" type="button" uk-toggle="target: #offcanvas-slide">
+              <span uk-icon="icon: menu"></span> MENU</button>
+  </div>
+  <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
+    <div class="uk-offcanvas-bar">
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <ul class="uk-nav uk-nav-default uk-text-uppercase">
+        <li><a href="index.html">home</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="manual.html">manual</a></li>
+        <li><a href="howto.html">howto</a></li>
+        <li><a href="community.html">community</a></li>
+        <li><a href="gallery.html">gallery</a></li>
+        <li><a href="download.html">download</a></li>
+        <hr>
+        <li><a href="https://armorpaint.org/">armorpaint</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="uk-cover-container cover-container">
+    <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
+  </div>
+
+  <div class="uk-section uk-section-secondary">
+    <div class="uk-text-center">
+
+    	<br/>
+    	<h3>Gallery of content generated in ArmorLab.📚</h3>
+      <br/><br/>
+    </div>
+  </div>
+
+  <div class="uk-section uk-section-secondary">
+
+      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+            <h5 class="uk-text-center">Inpaint</h4>
+            <div style="max-width: 400px; margin: auto;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade; ratio: 1:1;">
+              <ul class="uk-slideshow-items">
+                  <li><img src="img/slide1.jpg" uk-cover></li>
+                  <li><img src="img/slide2.jpg" uk-cover></li>
+                  <li><img src="img/slide3.jpg" uk-cover></li>
+                  <li><img src="img/slide4.jpg" uk-cover></li>
+              </ul>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+              <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
+            <h5 class="uk-text-center">Tiling</p>
+            <div style="max-width: 400px; margin: auto;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade; ratio: 1:1;">
+              <ul class="uk-slideshow-items">
+                  <li><img src="img/185/185_tile1.jpg" uk-cover></li>
+                  <li><img src="img/185/185_tile0.jpg" uk-cover></li>
+              </ul>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+              <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+            </div>
+            <br>
+        </div>
+
+      </div>
+
+      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+            <h5 class="uk-text-center">Tiling</p>
+            <div style="max-width: 400px; margin: auto;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade; ratio: 1:1;">
+              <ul class="uk-slideshow-items">
+                  <li><img src="img/66/66_tile1.jpg" uk-cover></li>
+                  <li><img src="img/66/66_tile0.jpg" uk-cover></li>
+              </ul>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+              <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+            <h5 class="uk-text-center">PBR Textures</p>
+            <div style="max-width: 400px; margin: auto;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade; ratio: 1:1;">
+              <ul class="uk-slideshow-items">
+                  <li><img src="img/66/66_tile.jpg" uk-cover></li>
+                  <li><img src="img/66/66_base.jpg" uk-cover></li>
+                  <li><img src="img/66/66_height.jpg" uk-cover></li>
+                  <li><img src="img/66/66_normal.jpg" uk-cover></li>
+                  <li><img src="img/66/66_occlusion.jpg" uk-cover></li>
+                  <li><img src="img/66/66_roughness.jpg" uk-cover></li>
+              </ul>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+              <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+            </div>
+            <br>
+        </div>
+      </div>
+
+      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+            <h5 class="uk-text-center">Tiling</p>
+            <div style="max-width: 400px; margin: auto;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade; ratio: 1:1;">
+              <ul class="uk-slideshow-items">
+                  <li><img src="img/179/179_tile1.jpg" uk-cover></li>
+                  <li><img src="img/179/179_tile0.jpg" uk-cover></li>
+              </ul>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+              <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+            <h5 class="uk-text-center">PBR Textures</p>
+            <div style="max-width: 400px; margin: auto;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade; ratio: 1:1;">
+              <ul class="uk-slideshow-items">
+                  <li><img src="img/179/179_tile.jpg" uk-cover></li>
+                  <li><img src="img/179/179_base.jpg" uk-cover></li>
+                  <li><img src="img/179/179_height.jpg" uk-cover></li>
+                  <li><img src="img/179/179_normal.jpg" uk-cover></li>
+                  <li><img src="img/179/179_occlusion.jpg" uk-cover></li>
+                  <li><img src="img/179/179_roughness.jpg" uk-cover></li>
+              </ul>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+              <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+            </div>
+            <br>
+        </div>
+      </div>
+
+      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+            <h5 class="uk-text-center">Tiling</p>
+            <div style="max-width: 400px; margin: auto;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade; ratio: 1:1;">
+              <ul class="uk-slideshow-items">
+                  <li><img src="img/31/31_tile1.jpg" uk-cover></li>
+                  <li><img src="img/31/31_tile0.jpg" uk-cover></li>
+              </ul>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+              <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+            <h5 class="uk-text-center">PBR Textures</p>
+            <div style="max-width: 400px; margin: auto;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade; ratio: 1:1;">
+              <ul class="uk-slideshow-items">
+                  <li><img src="img/31/31_tile.jpg" uk-cover></li>
+                  <li><img src="img/31/31_base.jpg" uk-cover></li>
+                  <li><img src="img/31/31_height.jpg" uk-cover></li>
+                  <li><img src="img/31/31_normal.jpg" uk-cover></li>
+                  <li><img src="img/31/31_occlusion.jpg" uk-cover></li>
+                  <li><img src="img/31/31_roughness.jpg" uk-cover></li>
+              </ul>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+              <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+            </div>
+            <br>
+        </div>
+      </div>
+
+      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+            <h5 class="uk-text-center">Tiling</p>
+            <div style="max-width: 400px; margin: auto;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade; ratio: 1:1;">
+              <ul class="uk-slideshow-items">
+                  <li><img src="img/180/180_tile1.jpg" uk-cover></li>
+                  <li><img src="img/180/180_tile0.jpg" uk-cover></li>
+              </ul>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+              <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+            <h5 class="uk-text-center">PBR Textures</p>
+            <div style="max-width: 400px; margin: auto;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade; ratio: 1:1;">
+              <ul class="uk-slideshow-items">
+                  <li><img src="img/180/180_tile.jpg" uk-cover></li>
+                  <li><img src="img/180/180_base.jpg" uk-cover></li>
+                  <li><img src="img/180/180_height.jpg" uk-cover></li>
+                  <li><img src="img/180/180_normal.jpg" uk-cover></li>
+                  <li><img src="img/180/180_occlusion.jpg" uk-cover></li>
+                  <li><img src="img/180/180_roughness.jpg" uk-cover></li>
+              </ul>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+              <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+            </div>
+            <br>
+        </div>
+      </div>
+
+      <br><br>
+  </div>
+
+<div class="uk-section uk-section-secondary">
+<div style="justify-content: center; display: grid; grid-template-columns: repeat(auto-fill, 170px); max-width: 900px; margin: auto;">
+<div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Asphalt001_icon.png"/><br>Asphalt001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Asphalt002_icon.png"/><br>Asphalt002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Asphalt003_icon.png"/><br>Asphalt003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Bark001_icon.png"/><br>Bark001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Bark002_icon.png"/><br>Bark002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Bark003_icon.png"/><br>Bark003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Cardboard001_icon.png"/><br>Cardboard001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Chessboard001_icon.png"/><br>Chessboard001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Concrete001_icon.png"/><br>Concrete001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Concrete002_icon.png"/><br>Concrete002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Concrete003_icon.png"/><br>Concrete003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Concrete004_icon.png"/><br>Concrete004<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Concrete005_icon.png"/><br>Concrete005<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Cover001_icon.png"/><br>Cover001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Drain001_icon.png"/><br>Drain001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Fabric001_icon.png"/><br>Fabric001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Fabric002_icon.png"/><br>Fabric002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/ForestGround001_icon.png"/><br>ForestGroun...<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Fur001_icon.png"/><br>Fur001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Fur002_icon.png"/><br>Fur002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Fur003_icon.png"/><br>Fur003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Grass001_icon.png"/><br>Grass001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/GrassDry001_icon.png"/><br>GrassDry001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Grid001_icon.png"/><br>Grid001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Ground001_icon.png"/><br>Ground001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Ground002_icon.png"/><br>Ground002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Ground003_icon.png"/><br>Ground003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Ground004_icon.png"/><br>Ground004<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Ground005_icon.png"/><br>Ground005<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Ground006_icon.png"/><br>Ground006<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Ground007_icon.png"/><br>Ground007<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Leaves001_icon.png"/><br>Leaves001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Marble001_icon.png"/><br>Marble001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Marble002_icon.png"/><br>Marble002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Mud001_icon.png"/><br>Mud001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Mud002_icon.png"/><br>Mud002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Paper001_icon.png"/><br>Paper001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Paper002_icon.png"/><br>Paper002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Plaster001_icon.png"/><br>Plaster001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Plaster002_icon.png"/><br>Plaster002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Plaster003_icon.png"/><br>Plaster003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Plaster004_icon.png"/><br>Plaster004<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Plaster005_icon.png"/><br>Plaster005<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Plaster006_icon.png"/><br>Plaster006<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Plaster007_icon.png"/><br>Plaster007<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Plastic001_icon.png"/><br>Plastic001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Rocks001_icon.png"/><br>Rocks001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Rocks002_icon.png"/><br>Rocks002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Rocks003_icon.png"/><br>Rocks003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Rocks004_icon.png"/><br>Rocks004<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Rocks005_icon.png"/><br>Rocks005<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Snow001_icon.png"/><br>Snow001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Snow002_icon.png"/><br>Snow002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Stone001_icon.png"/><br>Stone001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Tiles001_icon.png"/><br>Tiles001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Tiles002_icon.png"/><br>Tiles002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Tiles003_icon.png"/><br>Tiles003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Tiles004_icon.png"/><br>Tiles004<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Tiles005_icon.png"/><br>Tiles005<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/Tiles006_icon.png"/><br>Tiles006<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img src="img/cloud_raytraced/WoodBurnt001_icon.png"/><br>WoodBurnt001<br><br></div></div></div><div class="uk-section uk-section-secondary"><div class="uk-text-center">Materials are available in the <a href="https://armorpaint.org/cloud.html">ArmorPaint cloud</a>. 🖌🎨<br><br></div></div>  <!-- Footer Content -->
+  <div class="ro-background-darksecondary">
+    <br><br>
+    <div class="uk-container uk-container-small">
+      <div class="uk-child-width-expand" uk-grid>
+        <div class="uk-text-left">
+          <br><a style="color: #666" href="https://github.com/armory3d/armorlab">GitHub</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armorlab/issues">Tracker</a>
+          <br><a style="color: #666" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PLPYSRW3QXLW">Donate</a>
+        </div>
+        <div class="uk-text-center">
+          <br><a style="color: #666" href="https://armorlab.org/community">Contact</a>
+          <br><a style="color: #666" href="https://www.youtube.com/c/armory3d">Youtube</a>
+          <br><a style="color: #666" href="https://www.artstation.com/armory">ArtStation</a>
+        </div>
+        <div class="uk-text-right">
+          <br><a style="color: #666" href="https://twitter.com/armory3d">Twitter</a>
+          <br><a style="color: #666" href="https://instagram.com/armory3d">Instagram</a>
+          <br><a style="color: #666" href="https://fb.me/armorytools">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+  </div>
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js" integrity="sha256-2O4R+j0Pq+XLeUlXkPznJ0HrSkHA9keocNhV+csu6Zo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js" integrity="sha256-w38UjohynFpNOMjhZJ/oUIo/Md7D4tpQQJri5qDDTlE=" crossorigin="anonymous"></script>
+</body>
+</html>
