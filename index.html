@@ -92,7 +92,7 @@
         <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
           <div class="uk-margin-left uk-margin-top text-container">
             <h2 class="uk-heading-divider ro-text-header">AI-Powered Texture Authoring</h2>
-            ArmorLab is a stand-alone software designed for AI-powered texture authoring. Generate PBR materials by drag & dropping your photos.
+            ArmorLab is a stand-alone software designed for AI-powered texture authoring. Generate PBR textures using text prompts or by drag & dropping your photos.
           </div>
         </div>
       </div>
@@ -102,7 +102,7 @@
       <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
         <div style="padding: 0">
           <div class="uk-margin-left uk-margin-top text-container">
-            <h2 class="uk-heading-divider ro-text-header">PBR Textures</h2>
+            <h2 class="uk-heading-divider ro-text-header">Photo to Material</h2>
             Extract base color, height, normal map, occlusion and roughness textures from a photo using a pre-trained deep neural network.
           </div>
         </div>
@@ -126,13 +126,27 @@
 
   <div class="uk-section uk-section-secondary">
       <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-        <div class="uk-flex-last uk-flex-first@l video-container">
-          <iframe style="width: 100%; padding: 0" src="https://www.youtube.com/embed/qNHeNetQNvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div style="padding: 0">
+
+                <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade">
+                    <ul class="uk-slideshow-items">
+                        <li><img src="img/text_to_material/1.jpg" uk-cover></li>
+                        <li><img src="img/text_to_material/2.jpg" uk-cover></li>
+                        <li><img src="img/text_to_material/3.jpg" uk-cover></li>
+                        <li><img src="img/text_to_material/4.jpg" uk-cover></li>
+                        <li><img src="img/text_to_material/5.jpg" uk-cover></li>
+                    </ul>
+                    <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                    <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                </div>
+
         </div>
+
         <div class="uk-flex-first uk-flex-last@l">
           <div class="uk-margin-left uk-margin-top text-container">
-            <h2 class="uk-heading-divider ro-text-header">Node Based</h2>
-            Work fast with the convenience of nodes in a non-destructive environment. Build node graphs to automatically process photo batches.
+            <h2 class="uk-heading-divider ro-text-header">Text to Material</h2>
+            Create seamless PBR materials using text prompts. New materials can be endlessly generated, each starting from a different seed.
           </div>
         </div>
       </div>
@@ -143,7 +157,7 @@
         <div style="padding: 0">
           <div class="uk-margin-left uk-margin-top text-container">
             <h2 class="uk-heading-divider ro-text-header">Tiling</h2>
-            Use the tiling node to turn your photos into seamless textures.
+            Use the tiling node to automatically turn your photos into seamless textures. Text-guided mode is avaliable to tile textures contaning big cohesive features like wall bricks.
           </div>
         </div>
         <div style="padding: 0">
@@ -152,6 +166,8 @@
                     <ul class="uk-slideshow-items">
                         <li><img src="img/179/179_tile1.jpg" uk-cover></li>
                         <li><img src="img/179/179_tile0.jpg" uk-cover></li>
+                        <li><img src="img/bricks_tile/1.jpg" uk-cover></li>
+                        <li><img src="img/bricks_tile/2.jpg" uk-cover></li>
                     </ul>
                     <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
                     <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
@@ -162,7 +178,7 @@
       </div>
   </div>
 
-  <div class="uk-section uk-section-secondary">
+<!--   <div class="uk-section uk-section-secondary">
       <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
         <div class="uk-flex-last uk-flex-first@l video-container">
           <iframe style="width: 100%; padding: 0" src="https://www.youtube.com/embed/uQb-LOJdYrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -170,7 +186,36 @@
         <div class="uk-flex-first uk-flex-last@l">
           <div class="uk-margin-left uk-margin-top text-container">
             <h2 class="uk-heading-divider ro-text-header">Ray Tracing</h2>
-            <i>In development</i> - author materials in a viewport with true light simulation. Experimental builds featuring path-traced viewport rendering with Direct3D12 and Vulkan are now available. ArmorLab is powered by an in-house 3D rendering engine to achieve the best experience.
+            <i>In development</i> - author materials in a viewport with true light simulation. Experimental builds featuring path-traced viewport rendering with Direct3D12 are now available. ArmorLab is powered by an in-house 3D rendering engine to achieve the best experience.
+          </div>
+        </div>
+      </div>
+  </div> -->
+
+    <div class="uk-section uk-section-secondary">
+      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+
+        <div style="padding: 0">
+
+                <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade">
+                    <ul class="uk-slideshow-items">
+                        <li><img src="img/upscale_variance/1.jpg" uk-cover></li>
+                        <li><img src="img/upscale_variance/2.jpg" uk-cover></li>
+                        <li><img src="img/upscale_variance/3.jpg" uk-cover></li>
+                        <li><img src="img/upscale_variance/4.jpg" uk-cover></li>
+                    </ul>
+                    <a style="color:#000" class="uk-hidden-hover uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a style="color:#000" class="uk-hidden-hover uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                    <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                </div>
+
+        </div>
+
+
+        <div class="uk-flex-first uk-flex-last@l">
+          <div class="uk-margin-left uk-margin-top text-container">
+            <h2 class="uk-heading-divider ro-text-header">Upscale and Variance</h2>
+            Use the upscale node to super-sample photos into high resolution textures. Remix single photo into multiple variants with the text-guided variance node.
           </div>
         </div>
       </div>
@@ -181,7 +226,7 @@
         <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
           <div class="uk-margin-left uk-margin-top text-container">
             <h2 class="uk-heading-divider ro-text-header">Inpaint</h2>
-            Use the inpaint node to fill in texture details or remove unwanted parts from a photo by painting a mask.
+            Use the inpaint node to fill in texture details or remove unwanted parts from a photo by painting a mask. Replace parts of texture with desired detail via text prompts.
           </div>
         </div>
         <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
@@ -210,7 +255,7 @@
         <div style="padding: 0">
           <div class="uk-margin-left uk-margin-top text-container">
             <h2 class="uk-heading-divider ro-text-header">Runs Everywhere</h2>
-            ArmorLab runs on Windows, Linux, macOS and Android. iPadOS support is in development. On desktop, ArmorLab is a portable application with no installation and near-instant start up. Enhance any part of the software through plugins with god-mode powers.
+            ArmorLab runs on Windows, with Linux, macOS, iPadOS and Android builds coming soon. On desktop, ArmorLab is a portable application with no installation and near-instant start up. There is no dependency on cloud services and all processing is done on the host machine.
           </div>
         </div>
       </div>
