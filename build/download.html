@@ -1,17 +1,9 @@
 
   <div class="uk-section uk-section-secondary">
-  <div class="uk-text-center">
-  <br><br>In construction. 🔨
-  </div>
-  </div>
-
-  <!-- <div class="uk-section uk-section-secondary">
     <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
       <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
         <script src="https://gumroad.com/js/gumroad-embed.js"></script>
-        <div class="gumroad-product-embed" data-gumroad-product-id="armorlab" style="text-align: center;">
-          <a href="https://gumroad.com/l/armorlab">Loading...</a>
-        </div>
+        <div class="gumroad-product-embed"><a href="https://armory.gumroad.com/l/armorlab">Loading...</a></div>
       </div>
       <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
         <div class="uk-margin-left uk-margin-top text-container">
@@ -27,7 +19,7 @@
     <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
       <div style="padding: 0">
         <div class="uk-margin-left uk-margin-top text-container">
-          <h2 class="uk-heading-divider ro-text-header">Release</h2>
+          <h2 class="uk-heading-divider ro-text-header">Latest Release</h2>
           <ul>
             <li>Version: <span id="spanversion">...</span></li>
             <li>Updated: <span id="spanupdated">...</span></li>
@@ -43,24 +35,6 @@
   </div>
 
   <div class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-      <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
-        <img src="img/plugin.jpg">
-      </div>
-      <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
-        <div class="uk-margin-left uk-margin-top text-container">
-          <h2 class="uk-heading-divider ro-text-header">Development</h2>
-          <ul>
-          <li><b><span id="spanstatus">...</span></b> people already supported the project ❤️</li>
-          <li>Follow development on <a href="https://github.com/armory3d/armorlab">GitHub</a></li>
-          <li>ArmorLab is also available on <a href="https://armory.itch.io/armorlab">itch.io</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="uk-section uk-section-secondary">
     <br><br><br><br>
     <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
       <div class="uk-flex-first uk-flex-last@l" style="padding: 0" align="center">
@@ -69,14 +43,6 @@
     </div>
     <br><br><br><br>
   </div>
-
-
-  <script type="text/javascript">
-    $.get("https://luboslenco.gitlab.io/fund_import/index.html", function(data) {
-      data = JSON.parse(data);
-      $("#spanstatus").html("" + data.lab + "");
-    });
-  </script>
 
   <script type="text/javascript">
     $.get("https://luboslenco.gitlab.io/armorpaint/index_lab.html", function(data) {
