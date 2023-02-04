@@ -1,9 +1,41 @@
 
   <div class="uk-section uk-section-secondary">
     <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-      <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
-        <script src="https://gumroad.com/js/gumroad-embed.js"></script>
-        <div class="gumroad-product-embed"><a href="https://armory.gumroad.com/l/armorlab">Loading...</a></div>
+      <div class="uk-flex-last uk-flex-first@l" style="padding: 0; margin: auto; text-align: center;">
+
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+        <div class="uk-card uk-card-default" style="text-align: left; font-family: Lato; max-width: 1005px;">
+          <div class="uk-card-body" style="padding: 0; text-align: center; background: #f4f4f4;">
+              <img src="img/widget.jpg">
+          </div>
+          <div class="uk-card-body" style="padding-top: 15px; padding-bottom: 15px; background: #f4f4f4; border-bottom: 2px solid #dadada;">
+            <div style="float:left">
+              <p style="font-size: 26px;"><a href="https://armory.itch.io/armorlab" target="_blank" style="color: #434343"><b>ArmorLab</b></a></p>
+              <p>Texture authoring software for Windows. Linux (cpu only) and macOS (apple silicon only) builds also provided.</p>
+              <i>(Includes <a href="https://armorpaint.org/" target="_blank" style="color: #000">ArmorPaint</a>)</i>
+            </div>
+            <div style="float:right">
+              <a href="https://armory.itch.io/" target="_blank"><img src="img/ava.png" width="30px"></a> by <a href="https://armory.itch.io/" target="_blank" style="color: #000">armory</a>
+            </div>
+          </div>
+          <div class="uk-card-body" style="padding-top: 15px; padding-bottom: 15px;">
+            <p>Download this tool by purchasing it for <b>$20.00</b> USD.</p>
+            <i><div class="tooltip"><span id="spansales">...</span> sales<span class="tooltiptext">itch + gumroad</span></div></i>
+            <hr style="border-bottom: 1px dashed #dadada;">
+          </div>
+          <div class="uk-card-body" style="padding-top: 15px; padding-bottom: 15px;">
+            <button class="uk-button uk-button-secondary uk-button-large uk-width-1-1" style="background: #ff2449; color: #fff; text-transform: none;" id="buy_button"><b>Add to Cart</b></button>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://static.itch.io/api.js"></script>
+        <script type="text/javascript">
+          Itch.attachBuyButton(document.getElementById("buy_button"), {
+            user: "armory",
+            game: "armorlab"
+          });
+        </script>
+        <iframe frameborder="0" src="https://itch.io/embed/994152?dark=true" width="0" height="0"></iframe> <!-- For analytics? -->
+
       </div>
       <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
         <div class="uk-margin-left uk-margin-top text-container">
@@ -23,6 +55,7 @@
           <ul>
             <li>Version: <span id="spanversion">...</span></li>
             <li>Updated: <span id="spanupdated">...</span></li>
+            <li>Follow development on <a href="https://github.com/armory3d/armorlab">GitHub</a></li>
             <li><a href="notes.html">What's new</a></li>
           </ul>
           <p>🖌🎨</p>
@@ -54,5 +87,6 @@
       var day = s[4] === '0' ? s[5] : s[4] + s[5];
       $("#spanversion").html("" + data.name + "");
       $("#spanupdated").html("" + months[parseInt(month) - 1] + ' ' + day + ', 20' + year + "");
+      $("#spansales").html("" + data.sales + "");
     });
   </script>
