@@ -2,7 +2,12 @@
   <div class="uk-section uk-section-secondary">
     <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
       <div class="uk-flex-last uk-flex-first@l" style="padding: 0; margin: auto; text-align: center;">
-
+        <ul uk-switcher class="uk-child-width-expand uk-subnav uk-subnav-pill" style="margin-bottom: 0; padding-top: 30px;">
+            <li class="uk-active"><a href="#">itch.io</a></li>
+            <li><a href="#">gumroad</a></li>
+        </ul>
+        <ul class="uk-switcher">
+        <li>
         <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
         <div class="uk-card uk-card-default" style="text-align: left; font-family: Lato; max-width: 1005px;">
           <div class="uk-card-body" style="padding: 0; text-align: center; background: #f4f4f4;">
@@ -23,7 +28,7 @@
             <hr style="border-bottom: 1px dashed #dadada;">
           </div>
           <div class="uk-card-body" style="padding-top: 15px; padding-bottom: 15px;">
-            <button class="uk-button uk-button-secondary uk-button-large uk-width-1-1" style="background: #ff2449; color: #fff; text-transform: none;" id="buy_button"><b>Add to Cart - $<span id="spanprice">...</span></b></button>
+            <button class="uk-button uk-button-secondary uk-button-large uk-width-1-1" style="background: #000; color: #fff; text-transform: none;" id="buy_button"><b>Add to cart - $<span id="spanprice">...</span></b></button>
           </div>
         </div>
         <script type="text/javascript" src="https://static.itch.io/api.js"></script>
@@ -33,8 +38,12 @@
             game: "armorlab"
           });
         </script>
-        <p style="color: #606060">Also available on <a style="color: #808080" target="_blank" href="https://armory.gumroad.com/l/armorlab">Gumroad</a></p>
-
+        </li>
+        <li>
+          <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+          <div class="gumroad-product-embed"><a href="https://armory.gumroad.com/l/armorlab">Loading...</a></div>
+        </li>
+        </ul>
       </div>
       <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
         <div class="uk-margin-left uk-margin-top text-container">
@@ -54,7 +63,6 @@
           <ul>
             <li>Version: <span id="spanversion">...</span></li>
             <li>Updated: <span id="spanupdated">...</span></li>
-            <li>Follow development on <a href="https://github.com/armory3d/armorlab">GitHub</a></li>
             <li><a href="notes.html">What's new</a></li>
           </ul>
           <p>🖌🎨</p>
