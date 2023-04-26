@@ -85,7 +85,7 @@
   </div>
 
   <script type="text/javascript">
-    $.get("https://server.armorpaint.org/lab.html", function(data) {
+    $.get("https://server.armorpaint.org/armorlab.html", function(data) {
       data = JSON.parse(data);
       var s = data.version + '';
       var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -101,6 +101,6 @@
     let _onclick = document.getElementById('buy_button').onclick;
     document.getElementById('buy_button').onclick = function() {
       _onclick();
-      $.get("https://server.armorpaint.org/cart_lab.html", function(data) {});
+      $.get("https://server.armorpaint.org/cart_armorlab.html", function(data) {});
     }
   </script>
