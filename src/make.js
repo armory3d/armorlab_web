@@ -41,7 +41,7 @@ writeManual('manual.html', 'manual_header.html', 'manual_footer.html', '../manua
 		<div style="justify-content: center; display: grid; grid-template-columns: repeat(auto-fill, 170px); max-width: 900px; margin: auto;">
 	`;
 	let icon_folders = [
-		'../../armorpaint_cloud/public/cloud/materials/scanned'
+		'../../armorpaint_cloud/public/cloud/materials/armorlab'
 	];
 	for (folder of icon_folders) {
 		fs.readdirSync(folder).forEach(file => {
