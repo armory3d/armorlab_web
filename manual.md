@@ -36,7 +36,7 @@ Latest builds can be downloaded through your [Gumroad Library](https://gumroad.c
 
 # Get Started
 
-<div style="height:300px"><iframe style="top:0;left:0;width:100%;height:100%;max-width:560px;" src="https://www.youtube.com/embed/OWL69vBLRHc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div style="height:300px"><iframe style="top:0;left:0;width:100%;height:100%;max-width:560px;" src="https://www.youtube.com/embed/-PYPuZQsujs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 #### Windows
 
@@ -146,7 +146,7 @@ Click on the `Status bar - Browser tab` to activate the built-in asset browser.
 
 # Nodes
 
-<!-- ![](img/manual/b.jpg) -->
+![](img/manual/b.jpg)
 
 Texture processing in ArmorLab is done via composing node graphs in node editor.
 - Use toolbar at the top to add new nodes.
