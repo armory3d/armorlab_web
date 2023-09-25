@@ -12,7 +12,7 @@ ArmorLab is a stand-alone software designed for AI-powered texture authoring. Ge
 
 # Download
 
-**Windows** build is available. **Linux** and **macOS** builds are coming soon. On desktop, ArmorLab is a portable application with no installation - just unpack and run.
+**Windows** build is available. **Linux** (cpu only) and **macOS** (apple silicon only) builds also provided. On desktop, ArmorLab is a portable application with no installation - just unpack and run.
 
 > [Get ArmorLab](https://armorlab.org/download.html)
 
@@ -44,13 +44,13 @@ Unpack downloaded archive and run `ArmorLab.exe`. In some cases, Windows may pro
 
 #### Linux
 
-Coming soon.
+Unpack downloaded archive and run `ArmorLab`. In some cases, you may need to open terminal in the extracted folder and run `./ArmorLab`.
 
 #### macOS
 
-Coming soon.
+Unpack downloaded archive and run `ArmorLab.app`.
 
-#### iPadOS
+#### iOS
 
 Coming soon.
 
