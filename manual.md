@@ -20,7 +20,7 @@ ArmorLab is a stand-alone software designed for AI-powered texture authoring. Ge
 
 ArmorLab runs on the GPU by default and the processing time depends on a graphics card performance. GTX 1060/6GB or better is recommended. Optionally, GPU inference can be disabled at the expense of processing time. With GPU inference disabled, ArmorLab benefits from multi-threaded CPU performance.
 
-> See [Preferences](https://armorlab.org/manual/#/?id=preferences) to tune performance.
+> See [Preferences](https://armorlab.org/manual#preferences) to tune performance.
 
 #### Updating
 
