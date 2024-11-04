@@ -8,12 +8,6 @@ let writeHtml = function(fileName, extra = '') {
 	fs.writeFileSync('../' + fileName, header + cover + html + extra + footer);
 }
 
-let writeNews = function(fileName, extra = '') {
-	let html = fs.readFileSync('../../armorpaint_web/src/' + fileName, 'utf8');
-	html = html.replaceAll('img/news/', 'https://armorpaint.org/img/news/');
-	fs.writeFileSync('../' + fileName, header + cover + html + extra + footer);
-}
-
 let writeManual = function(fileNameOut, fileNameHeader, fileNameFooter, fileNameMd) {
 	let showdown = require('./showdown.min.js');
     let converter = new showdown.Converter();
@@ -22,6 +16,12 @@ let writeManual = function(fileNameOut, fileNameHeader, fileNameFooter, fileName
 	let htmlHeader = fs.readFileSync(fileNameHeader, 'utf8');
 	let htmlFooter = fs.readFileSync(fileNameFooter, 'utf8');
 	fs.writeFileSync('../' + fileNameOut, header + htmlHeader + converted_md + htmlFooter + footer);
+}
+
+let writeNews = function(fileName, extra = '') {
+	let html = fs.readFileSync('../../armorpaint_web/src/' + fileName, 'utf8');
+	html = html.replaceAll('img/news/', 'https://armorpaint.org/img/news/');
+	fs.writeFileSync('../' + fileName, header + cover + html + extra + footer);
 }
 
 writeHtml('index.html');
@@ -37,13 +37,13 @@ writeManual('manual.html', 'manual_header.html', 'manual_footer.html', '../manua
 {
 	fs.rmSync('../img/cloud', { recursive: true });
 	fs.mkdirSync('../img/cloud');
-	cloud_grid = `
+	let cloud_grid = `
 		<div style="justify-content: center; display: grid; grid-template-columns: repeat(auto-fill, 170px); max-width: 900px; margin: auto;">
 	`;
 	let icon_folders = [
 		'../../armorpaint_cloud/public/cloud/materials/armorlab'
 	];
-	for (folder of icon_folders) {
+	for (let folder of icon_folders) {
 		fs.readdirSync(folder).forEach(file => {
 			let isMaterial = folder.indexOf('/materials') > 0;
 			if (file.endsWith(isMaterial ? '.png' : '.jpg')) {
@@ -60,4 +60,42 @@ writeManual('manual.html', 'manual_header.html', 'manual_footer.html', '../manua
 	}
 	cloud_grid += '</div>';
 	writeHtml('gallery.html', cloud_grid);
+}
+
+// rss.xml
+{
+	let rss = `<?xml version="1.0" encoding="UTF-8" ?>
+	<rss version="2.0">
+	<channel>
+		<title>ArmorLab</title>
+		<link>https://armorlab.org/news</link>
+		<description>Texture Creation Software</description>
+	`;
+
+	let news = fs.readFileSync("../../armorpaint_web/src/news.html", "utf8");
+	let h3s = news.split(`<h3 class="fw-normal text-muted mb-3">`);
+	let items = [];
+	h3s.shift();
+	h3s.shift();
+	for (let h3 of h3s) {
+		items.push(h3.split("</h3>")[0]);
+	}
+
+	for (let item of items) {
+		rss += `
+			<item>
+	    		<title>ArmorLab News</title>
+	    		<link>https://armorlab.org/news</link>
+	    		<description>${item}</description>
+			</item>
+
+		`;
+	}
+
+	rss += `
+	</channel>
+	</rss>
+	`;
+
+	fs.writeFileSync('../rss.xml', rss);
 }
