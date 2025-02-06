@@ -19,15 +19,16 @@ let writeManual = function(fileNameOut, fileNameHeader, fileNameFooter, fileName
 }
 
 let writeNews = function(fileName, extra = '') {
-	let html = fs.readFileSync('../../armorpaint_web/src/' + fileName, 'utf8');
-	html = html.replaceAll('img/news/', 'https://armorpaint.org/img/news/');
-	fs.writeFileSync('../' + fileName, header + cover + html + extra + footer);
+	//let html = fs.readFileSync('../../armorpaint_web/src/' + fileName, 'utf8');
+	//html = html.replaceAll('img/news/', 'https://armorpaint.org/img/news/');
+	//fs.writeFileSync('../' + fileName, header + cover + html + extra + footer);
 }
 
 writeHtml('index.html');
 writeNews('news.html');
 writeHtml('community.html');
 writeHtml('download.html');
+writeHtml('login.html');
 writeHtml('notes.html');
 writeHtml('howto.html');
 writeHtml('privacy.html');
@@ -35,7 +36,7 @@ writeManual('manual.html', 'manual_header.html', 'manual_footer.html', '../manua
 
 // gallery.html
 {
-	fs.rmSync('../img/cloud', { recursive: true });
+	/*fs.rmSync('../img/cloud', { recursive: true });
 	fs.mkdirSync('../img/cloud');
 	let cloud_grid = `
 		<div style="justify-content: center; display: grid; grid-template-columns: repeat(auto-fill, 170px); max-width: 900px; margin: auto;">
@@ -59,7 +60,7 @@ writeManual('manual.html', 'manual_header.html', 'manual_footer.html', '../manua
 		});
 	}
 	cloud_grid += '</div>';
-	writeHtml('gallery.html', cloud_grid);
+	writeHtml('gallery.html', cloud_grid);*/
 }
 
 // rss.xml
