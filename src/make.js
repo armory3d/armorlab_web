@@ -25,7 +25,6 @@ let writeNews = function(fileName, extra = '') {
 }
 
 writeHtml('index.html');
-writeNews('news.html');
 writeHtml('community.html');
 writeHtml('download.html');
 writeHtml('login.html');
@@ -61,42 +60,4 @@ writeManual('manual.html', 'manual_header.html', 'manual_footer.html', '../manua
 	}
 	cloud_grid += '</div>';
 	writeHtml('gallery.html', cloud_grid);*/
-}
-
-// rss.xml
-{
-	let rss = `<?xml version="1.0" encoding="UTF-8" ?>
-	<rss version="2.0">
-	<channel>
-		<title>ArmorLab</title>
-		<link>https://armorlab.org/news</link>
-		<description>Texture Creation Software</description>
-	`;
-
-	let news = fs.readFileSync("../../armorpaint_web/src/news.html", "utf8");
-	let h3s = news.split(`<h3 class="fw-normal text-muted mb-3">`);
-	let items = [];
-	h3s.shift();
-	h3s.shift();
-	for (let h3 of h3s) {
-		items.push(h3.split("</h3>")[0]);
-	}
-
-	for (let item of items) {
-		rss += `
-			<item>
-	    		<title>ArmorLab News</title>
-	    		<link>https://armorlab.org/news</link>
-	    		<description>${item}</description>
-			</item>
-
-		`;
-	}
-
-	rss += `
-	</channel>
-	</rss>
-	`;
-
-	fs.writeFileSync('../rss.xml', rss);
 }
